@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prototype techniques</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <h3>Married women fall behind in India's workforce race</h3>
+    </nav>
+
+    <!-- text -->
+    <div class="header title step">
+      <div class="aligner">
+        <h1>Married women fall behind in India's workforce race</h1>
+        <h2></h2>
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Manogna Maddipatla</h2>
+			<p>Women's participation in a country's workforce has been an undeniable indicator of progress. Women's role in family, traditional gender norms, discrimination, social attitudes, all influence women's decision to take up paid jobs outside their homes. Though women's participation in India's labour force has increased about 10% from 23.3% in 2017-18, the levels still remain glaringly below those of men. This essay seeks to explore what currently available data suggests about the role of women in India's workforce and whether education and marital status influence these trends.</p>
+      <p>Data from the International Labour Organization's (ILO) labour force
+			survey suggests that a majority of Indian women with advanced education
+			levels continue to stay out of the country's workforce, especially when
+			married or cohabiting. This is in contrast with married men, who show
+			higher participation levels than their unmarried counterparts.</p>
+    </div>
+
+    <div class="text">
+      <h1>Growth in education levels does not translate into workforce participation</h1>
+      This is despite the country making notable progress in the last decade in
+      increasing access to education for its girls. According to 2022 data from the World Bank, more girls complete their lower secondary education in India than boys. Their enrollment in secondary education is steadily on rise, the data shows. Female students comprised 48% of the country's total enrollment in higher education in 2021-2022,  according to the  latest All India <a href="https://www.hindustantimes.com/education/news/women-comprises-48-of-overall-enrollment-in-higher-education-aishe-report-101706323112640.html">Survey</a> on Higher Education (AISHE). 
+				This, however, does not seem to translate into labour participation.
+    </div>
+    <div class="responsive-svg-container">
+      <div id="filters"></div>
+    </div>
+    <ul class="color-legend">
+      <li class="color-legend-item">
+        Female:
+        <span class="color-legend-item-color1"></span>
+      </li>
+      <li class="color-legend-item">
+        Male:
+        <span class="color-legend-item-color2"></span>
+      </li>
+    </ul>
+    <p>
+      A positive correlation between labour participation of women and their
+      education or skill levels can only be seen in the urban parts of India,
+      according to
+      <a
+        href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.adb.org/sites/default/files/publication/928471/adbi-statistical-portrait-indian-female-labor-force_0.pdf"
+        >a 2023 report</a
+      >
+      by the Asian Development Bank Institute. A majority of Indian women who
+      work are from rural areas and pariticipate largely in agriculture, the
+      report suggests.
+    </p>
+    <p>
+      The gender gap, or the difference in labour participation rates between
+      men and women, is significantly higher in India at 50.9%, the ILO data
+      shows. This is in contrast with countries like Sweden, where the gap is as
+      low as 6.3%.
+    </p>
+		<div class="tableauPlaceholder" id="viz" height:"700px" >
+      <noscript
+        ><a href="#"
+          ><img
+            alt="Global labour force participation of women"
+            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardProject_17144185105310&#47;Spatialchart&#47;1_rss.png"
+            style="border: none" /></a></noscript
+      ><object class="tableauViz" style="display: none">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param
+          name="name"
+          value="DashboardProject_17144185105310&#47;Spatialchart"
+        />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param
+          name="static_image"
+          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardProject_17144185105310&#47;Spatialchart&#47;1.png"
+        />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+        <param name="filter" value="publish=yes" />
+      </object>
+    </div>
+    <script type="text/javascript">
+      var divElement = document.getElementById("viz");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      vizElement.style.width = "90%";
+      vizElement.style.height = divElement.offsetWidth * 0.50 + "px";
+      var scriptElement = document.createElement("script");
+      scriptElement.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+      <h1>Traditional gender norms force women to choose between work and family</h1>
+      <p>Women's disproportionate participation in unpaid, domestic labour and
+      conservative social norms contribute to keeping them out of paid labour,
+      according to reports from the ILO.</p>
+			<p>Indian government's 2021-2022 Periodic Labour Force <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://dge.gov.in/dge/sites/default/files/2023-05/Female_Labour_Utilization_in_India_April_2023_final__1_-pages-1-2-merged__1_.pdf">Survey</a> shows that 44.5% of female respondents stated child care and commitments in home making as the reasons for staying out of the workforce. In contrast, nearly 72% men said the reason was the decision to continue to study.</p>
+			
+    <!-- image 1 -->
+    <div class="center_aligner">
+      <!-- change line 120 if you want to change the size of the image -->
+      <img class="small" src="images/illustrator-project07.svg" />
+    </div>
+    <!-- caption for image 1 -->
+    <div class="center_aligner">
+      <div class="caption">A graphical representation of ILO's data on married women and men</div>
+    </div>
+    <div class="text">
+    </div>
+
+    <div class="text">
+      <h1>Where are the women then, if not at work?</h1>
+      <p>A report published by the Ministry of Labour and Employment last Arpil says that a large proportion of women aged 15 and over remains outside the labour force because of their engagement in household work. About 77% of urban women were outside the labour force in 2021-2022, of which 50.3% attended to domestic duties only.</p>
+    </div>
+
+    <!-- counter -->
+    <div class="header sticky step" id="dynamic_sticky1"></div>
+
+    <div class="leftside">
+      <div class="text progressive">
+        <h1>More rural women take up paid work than urban dwellers</h1>
+        <p>Most of the women who work in rural areas engage in casual labour or are self-employed.</p>
+      </div>
+
+      <div class="text progressive">
+        <h1>Gender pay gap</h1>
+        <p>Men earn significantly more than women for the same work done, <a href="https://asiapacific.unwomen.org/en/stories/op-ed/2022/09/the-gender-pay-gap-hard-truths-and-actions-needed">data</a> suggests. </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+
+  <script type="text/javascript">
+    // instantiate the scrollama
+    const scroller = scrollama();
+    const scroller2 = scrollama();
+
+    scroller
+      .setup({
+        step: ".text",
+        offset: 0.9,
+      })
+      .onStepEnter((response) => {
+        // { element, index, direction }
+        el = response.element;
+        el.style.opacity = 1;
+        el.style.marginTop = "5%";
+      })
+      .onStepExit((response) => {
+        // { element, index, direction }
+        el = response.element;
+      });
+    // setup resize event
+    window.addEventListener("resize", scroller.resize);
+
+    scroller2
+      .setup({
+        step: ".progressive",
+        offset: 0.6,
+      })
+      .onStepEnter((response) => {
+        // { element, index, direction }
+        el = response.element;
+        el.style.opacity = 1;
+        if (response.index == 0 || 1 || 2) {
+          stick("dynamic_sticky1");
+          response.direction == "down";
+          if (response.index == 0) {
+            count(
+              1,
+              50,
+              1,
+              "Unpaid work",
+              "percent urban women engage in domestic work only",
+              "dynamic_sticky1"
+            );
+          } else if (response.index == 1) {
+            count(1, 35, 1, "Pay gap", "average percent difference in male and female earnings", "dynamic_sticky1");
+          } else if (response.index == 2) {
+            count(0, 0.9, 0.1, "Mood", "increase", "dynamic_sticky1");
+          }
+        }
+      })
+      .onStepExit((response) => {
+        // { element, index, direction }
+        el = response.element;
+        console.log(response.index);
+        if (response.index == 2) {
+          unstick("dynamic_sticky1");
+        }
+        el.style.opacity = 0;
+      });
+    // setup resize event
+    window.addEventListener("resize", scroller2.resize);
+
+    function count(
+      number1,
+      number2,
+      step,
+      title,
+      label,
+      location_id,
+      prefix = "+",
+      suffix = "%"
+    ) {
+      target = document.querySelector("#" + location_id);
+      console.log(target);
+      let text = number1;
+
+      setInterval(function () {
+        if (text != number2) {
+          num = text + step;
+          if (num % 1 == 0) {
+            text = num;
+          } else {
+            text = parseFloat(num.toFixed(2));
+          }
+          target.innerHTML =
+            "<div class='aligner'><h1>" +
+            title +
+            "</h1><div id='counter'>" +
+            prefix +
+            text +
+            suffix +
+            "</div><h2>" +
+            label +
+            "</h2></div>";
+        }
+      }, 30);
+    }
+
+    function stick(location_id) {
+      target = document.querySelector("#" + location_id);
+      target.style.position = "sticky";
+    }
+
+    function unstick(location_id) {
+      target = document.querySelector("#" + location_id);
+      target.style.position = "relative";
+    }
+  </script>
+</html>
