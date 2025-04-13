@@ -60,8 +60,6 @@ const margin = {
 const innerWidth = 600 - margin.left - margin.right;
 const innerHeight = 500 - (margin.top + margin.bottom);
 
-
-
 const createViz = (data) => {
   d3.selectAll("svg > *").remove();
 
@@ -70,12 +68,21 @@ const createViz = (data) => {
     .attr("id", "fullChart")
 
   svg.append("text")
-    .attr("x", (600 / 2))
+    .attr("x", (580 / 2))
     .attr("y", 60)
     .attr("text-anchor", "middle")
-    .style("font-size", "16px")
+    .style("font-size", "20px")
     .style("font-weight", "bold")
-    .text("Labour participation of Indian Women vs Men");
+    .text("Labor Force Participation in India (1994–2023), by Gender");
+
+  svg.append("text")
+    .attr("x", (540 / 2))
+    .attr("y", 90)
+    .attr("text-anchor", "middle")
+    .style("font-size", "14px")
+    .style("font-weight", "normal")
+    .style("width", "50%")
+    .text("Married women with advanced education show the least workforce participation level, in stark contrast with married men");
 
   const yScale = d3.scaleLinear()
     .domain([0, 100])
@@ -108,7 +115,7 @@ const createViz = (data) => {
   yLabels.forEach((label) => {
     barAndLabel
       .append("text")
-      .text(label)
+      .text(label === 100 ? "100%" : label)
       .attr("x", -10)
       .attr("y", 550 - yScale(label))
       .attr("text-anchor", "end")
@@ -155,10 +162,10 @@ const createViz = (data) => {
 
 const populateFilters = (data1, data2, data3, data4) => {
   const filters = [
-    { id: "advanced-married", label: "Married with advanced education", isActive: false },
-    { id: "intermediate-married", label: "Married with intermediate education", isActive: false },
-    { id: "advanced-single", label: "Single with advanced education", isActive: false },
-    { id: "intermediate-single", label: "Single with intermediate education", isActive: false }
+    { id: "advanced-married", label: "Married + advanced education", isActive: false },
+    { id: "intermediate-married", label: "Married + intermediate education", isActive: false },
+    { id: "advanced-single", label: "Single + advanced education", isActive: false },
+    { id: "intermediate-single", label: "Single + intermediate education", isActive: false }
   ];
 
   d3.select("#filters")
@@ -185,7 +192,7 @@ const populateFilters = (data1, data2, data3, data4) => {
     button2.classed('true', false);
     button3.classed('true', false);
     button4.classed('true', false);
-    createViz(data1.reverse());
+    createViz(data1);
   })
 
   button2.on("click", (e) => {
